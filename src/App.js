@@ -1,7 +1,8 @@
-import './App.css';
-import { useEffect } from 'react'; // ✅ Add this
+import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import './App.css';
+import ContactForm from './ContactForm';
 
 function App() {
   useEffect(() => {
@@ -75,6 +76,9 @@ function App() {
           📄 View Resume
         </a>
       </div>
+
+      {/* Contact Form Section */}
+      <ContactForm />
     </div>
   );
 }
