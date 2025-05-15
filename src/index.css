@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+body {
+  background-color: #000000; /* Pure black */
+  color: white; /* Makes text visible on dark background */
+}
+
+
+
