@@ -9,6 +9,14 @@ function App() {
     AOS.init({ duration: 1000 });
   }, []);
 
+  const educationData = [
+    {
+      degree: "B.E. Computer Science and Engineering",
+      institution: "Anna University",
+      year: "2020 - 2025"
+    }
+  ];
+
   return (
     <div className="container">
       {/* Hero Section */}
@@ -25,23 +33,40 @@ function App() {
         I enjoy building clean and responsive user interfaces using React.
       </p>
 
-      {/* About Section */}
-  {/* About Me Section */}
-<div className="about-section" data-aos="fade-right">
-  <h3>👨‍💻 About Me</h3>
-  <div className="about-card">
-    <p>
-      I’m <strong>Aathikesavan.G</strong>, a passionate <strong>Frontend Developer</strong> with hands-on experience in crafting clean, responsive UIs using <strong>React, JavaScript</strong> and <strong>Tailwind CSS</strong>.
-    </p>
-    <p>
-      During my internship at <strong>Ecran Technology</strong>, I contributed to real-time UI development, building layouts with <strong>HTML</strong> and <strong>CSS</strong> that are both user-friendly and mobile-friendly.
-    </p>
-    <p>
-      I'm always eager to learn new tech, enhance my skills, and collaborate on exciting web projects.
-    </p>
-  </div>
-</div>
+      {/* About Me Section */}
+      <div className="about-section" data-aos="fade-right">
+        <h3>👨‍💻 About Me</h3>
+        <div className="about-card">
+          <p>
+            I’m <strong>Aathikesavan.G</strong>, a passionate <strong>Frontend Developer</strong> 
+            with hands-on experience in crafting clean, responsive UIs using 
+            <strong> React, JavaScript</strong> and <strong>Tailwind CSS</strong>.
+          </p>
+          <p>
+            During my internship at <strong>Ecran Technology</strong>, I contributed to 
+            real-time UI development, building layouts with <strong>HTML</strong> and 
+            <strong> CSS</strong> that are both user-friendly and mobile-friendly.
+          </p>
+          <p>
+            I'm always eager to learn new tech, enhance my skills, and collaborate on 
+            exciting web projects.
+          </p>
+        </div>
+      </div>
 
+      {/* Education Section */}
+      <div className="education-section" data-aos="fade-up">
+        <h3>🎓 Education</h3>
+        <div className="education-grid">
+          {educationData.map((edu, index) => (
+            <div key={index} className="education-card">
+              <h4>{edu.degree}</h4>
+              <p>{edu.institution}</p>
+              <p>{edu.year}</p>
+            </div>
+          ))}
+        </div>
+      </div>
 
       {/* Projects Section */}
       <div className="projects-section" data-aos="fade-left">
@@ -64,67 +89,82 @@ function App() {
         </div>
       </div>
 
-      
       {/* Certifications Section */}
-<div className="certificates-section" data-aos="fade-up">
-  <h3>🎓 Certifications</h3>
-  <div className="cert-cards">
-    <div className="cert-card">
-      <h4>Python Programming</h4>
-      <p>UST – Coursera</p>
-    </div>
-    <div className="cert-card">
-      <h4>Introduction to IoT Boards</h4>
-      <p>Coursera</p>
-    </div>
-    <div className="cert-card">
-      <h4>Overview of Data Visualization</h4>
-      <p>Coursera</p>
-    </div>
-    <div className="cert-card">
-      <h4>Quiz Competition Winner</h4>
-      <p>Inter-College Level</p>
-    </div>
-  </div>
-</div>
+      <div className="certificates-section" data-aos="fade-up">
+        <h3>🎓 Certifications</h3>
+        <div className="cert-cards">
+          <div className="cert-card">
+            <h4>Python Programming</h4>
+            <p>UST – Coursera</p>
+          </div>
+          <div className="cert-card">
+            <h4>Introduction to IoT Boards</h4>
+            <p>Coursera</p>
+          </div>
+          <div className="cert-card">
+            <h4>Overview of Data Visualization</h4>
+            <p>Coursera</p>
+          </div>
+          <div className="cert-card">
+            <h4>Quiz Competition Winner</h4>
+            <p>Inter-College Level</p>
+          </div>
+        </div>
+      </div>
 
-
-      {/* Contact Section */}
       {/* Skills Section */}
-<div className="skills-section" data-aos="fade-right">
-  <h3>Skills</h3>
-  <div className="skills-grid">
-    <div className="skill-card">⚛️ React</div>
-    <div className="skill-card">💻 JavaScript</div>
-    <div className="skill-card">🎨 HTML & CSS</div>
-    <div className="skill-card">🌬️ Tailwind CSS</div>
-    <div className="skill-card">🧪 Git & GitHub</div>
-    <div className="skill-card">📦 Firebase</div>
-    <div className="skill-card">📱 Responsive Design</div>
-    <div className="skill-card">🚀 Deployment (Vercel)</div>
-  </div>
-</div>
+      <div className="skills-section" data-aos="fade-right">
+        <h3>Skills</h3>
 
-     {/* Contact Me Section */}
-<div className="contact-section" data-aos="fade-up">
-  <h3>📬 Contact Me</h3>
-  <div className="contact-card">
-    <p><strong>Email:</strong> <a href="mailto:aathikesavan122@gmail.com">aathikesavan122@gmail.com</a></p>
-    <p><strong>Phone:</strong> 9080631697</p>
-    <p><strong>GitHub:</strong> <a href="https://github.com/Aathikesavan1212" target="_blank" rel="noreferrer">github.com/Aathikesavan1212</a></p>
-    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/aathi-kesavan-917600265" target="_blank" rel="noreferrer">linkedin.com/in/aathi-kesavan</a></p>
+        <h4>Programming Languages</h4>
+        <div className="skills-grid">
+          <div className="skill-card">💻 JavaScript</div>
+          <div className="skill-card">🐍 Python</div>
+        </div>
 
-    <a
-      href="/Aathikesavan_Professional_Resume.pdf"
-      target="_blank"
-      rel="noreferrer"
-      className="resume-btn"
-    >
-      📄 viwe resume
-    </a>
-  </div>
-</div>
+        <h4>Front-End Development</h4>
+        <div className="skills-grid">
+          <div className="skill-card">⚛️ React</div>
+          <div className="skill-card">🎨 HTML & CSS</div>
+          <div className="skill-card">📱 Responsive Design</div>
+        </div>
 
+        <h4>Back-End & Database</h4>
+        <div className="skills-grid">
+          <div className="skill-card">🟢 Node.js</div>
+          <div className="skill-card">🗄️ MySQL</div>
+          <div className="skill-card">📦 Firebase</div>
+        </div>
+
+        <h4>Version Control</h4>
+        <div className="skills-grid">
+          <div className="skill-card">🧪 Git & GitHub</div>
+        </div>
+
+        <h4>Deployment Tools</h4>
+        <div className="skills-grid">
+          <div className="skill-card">🚀 Vercel</div>
+        </div>
+      </div>
+
+      {/* Contact Me Section */}
+      <div className="contact-section" data-aos="fade-up">
+        <h3>📬 Contact Me</h3>
+        <div className="contact-card">
+          <p><strong>Email:</strong> <a href="mailto:aathikesavan122@gmail.com">aathikesavan122@gmail.com</a></p>
+          <p><strong>Phone:</strong> 9080631697</p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/Aathikesavan1212" target="_blank" rel="noreferrer">github.com/Aathikesavan1212</a></p>
+          <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/aathi-kesavan-917600265" target="_blank" rel="noreferrer">linkedin.com/in/aathi-kesavan</a></p>
+
+          <a
+            href="/AATHIKESAVAN_RESUME.docx"
+            download="AATHIKESAVAN_RESUME.docx"
+            className="resume-btn"
+          >
+            📄 Download Resume (DOCX)
+          </a>
+        </div>
+      </div>
 
       {/* Contact Form Section */}
       <ContactForm />
