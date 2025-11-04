@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import './ContactForm.css';
 
 const ContactForm = () => {
@@ -9,17 +9,18 @@ const ContactForm = () => {
     e.preventDefault();
 
     emailjs.sendForm(
-      'service_0qux1gq',           // ✅ Your EmailJS Service ID
-      'template_rfmme0p',          // ✅ Your EmailJS Template ID
+      'service_0qux1gq',   // ✅ Your EmailJS Service ID 
+      'template_rfmme0p',  // ✅ Your EmailJS Template ID
       form.current,
-      'uMPHJ_ywCTF-I_Cj1'          // ✅ Your Public Key
+      'uMPHJ_ywCTF-I_Cj1'  // ✅ Your Public Key
     )
     .then(() => {
       alert('✅ Message sent successfully!');
       form.current.reset();
-    }, (error) => {
+    })
+    .catch((error) => {
       alert('❌ Failed to send message.');
-      console.log(error.text);
+      console.error('EmailJS Error:', error);
     });
   };
 
@@ -29,13 +30,13 @@ const ContactForm = () => {
       <form ref={form} onSubmit={sendEmail}>
         <input
           type="text"
-          name="name"
+          name="from_name"
           placeholder="Your Name"
           required
         />
         <input
           type="email"
-          name="email"
+          name="from_email"
           placeholder="Your Email"
           required
         />

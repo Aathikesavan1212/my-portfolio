@@ -2,8 +2,9 @@
   "name": "my-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://aathikesavan1212.github.io/my-portfolio",
+  "homepage": "https://Aathikesavan1212.github.io/my-portfolio/",
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
@@ -45,4 +46,3 @@
     ]
   }
 }
-
